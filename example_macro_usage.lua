@@ -44,14 +44,7 @@ LQ_protectTable(TableExample)
 local TestVariable2 = TableExample[1] -- You can access the table's contents but not overwrite it
 someOtherFunction(TestVariable2)
 
--- LUA 5.1 BUILT IN SPECIAL MACROS
--- Description: these are macros built in LuaQuid specifically for the lua version: 5.1
+-- Filler Macros
+-- LQ_gaslightBenchmark
 
--- LQ51_next
-local TableExampleV2 = {name = "James", race = "African American", fav_sport = "basketball"}
-local NextInit = LQ51_next(TableExampleV2) -- initialize
-local K, V = NextInit(TableExampleV2, nil) -- first arg: table, second arg: index, if second arg/index is nil, it will return the first key-value pair
-while K do
-  print(K, V)
-  K, V = NextInit(TableExampleV2, K)
-end
+LQ_gaslightBenchmark() -- initializes time manipulation
